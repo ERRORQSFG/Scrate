@@ -1,0 +1,25 @@
+{% load static %}
+
+<html>
+<head>
+    <title>Scrate - Регистрация</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="home.css"/>
+    <link rel="stylesheet" href="{% static 'crepy/css/reg.css' %}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="h1-custom-montserrat">Scrate - Регистрация</h1>
+<div class="reg-form">
+    <br>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="reg-form-button">Погнали!</button>
+</form>
+</div>
+</body>
+</html>

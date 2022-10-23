@@ -1,0 +1,20 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Scrate - Ваш профиль</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'crepy/css/reg.css' %}"/>
+    </head>
+<body>
+    <div class="main-div">
+        <div class="main-user-content">
+            {% if request.user.is_authenticated %}
+            <h1 class="username-h1">{{user.username}}</h1>
+            {% else %}
+            <h1>Вы не авторизованы! Войдите по <a href="/login">ссылке</a>!</h1>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

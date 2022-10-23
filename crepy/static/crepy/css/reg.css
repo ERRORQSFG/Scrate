@@ -1,0 +1,29 @@
+.reg-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+p {
+    font-family: system-ui;
+}
+
+.reg-form-button {
+  margin-left: 40%;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h1-custom-montserrat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logout-button {
+    margin-top: 5px;
+    border: 2px solid black;
+}

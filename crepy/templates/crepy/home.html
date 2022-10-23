@@ -1,0 +1,31 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Scrate - Главная</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{% static 'crepy/css/home.css' %}"/>
+        <link rel="stylesheet" href="{% static 'crepy/css/reg.css' %}"/>
+        <script src="{% static 'crepy/js/jQuery-3.6.1.min.js' %}"></script>
+    </head>
+
+    <body>
+        <div id="home_div">
+            <h1 id="main_h1">Scrate</h1>
+            <p id="main_p">Сайт по языку Python</p>
+            {% if request.user.is_authenticated %}
+            <div class="authorized-user">
+                Ваш никнейм | {{user.username}}
+                <br>
+                <a id="logout-button" href="/logout">Выйти</a>
+            </div>
+            {% else %}
+            <div class="home-buttons">
+                <a class="home_button" id="reg_button" href="/login">Войти</a>
+                <br>
+                <a class="home_button" id="login_button" href="/reg">Регистрация</a>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
